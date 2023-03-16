@@ -19,7 +19,7 @@ Alternatively, you can download the source code as a ZIP file from the GitHub re
 
 3. Navigate to the root directory of the project.
 ```
-cd morse-code-decoder
+cd morse-code-decoder/src
 ```
 4. Build the project using the following command:
 ```
