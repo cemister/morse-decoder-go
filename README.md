@@ -1,5 +1,5 @@
 # Morse Code Decoder
-This program decodes Morse code input into plain text output. It is written in Go and can be built from source.
+This is a simple command-line program written in Go that translates Morse code input into plain text. It can decode letters and numbers, and it also supports spaces between words.
 
 ## Requirements
   - Go version 1.16 or higher (because of `bytes.Buffer` type, which was introduced in 1.16)
