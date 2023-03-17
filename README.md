@@ -25,7 +25,7 @@ cd morse-decode-go/src
 ```
 go build
 ```
-This will create an executable file called morse-code-decoder.
+This will create an executable file called morse_decoder.
 
 ## Usage
 To use the program, provide a Morse code string as a command line argument using the -morse flag:
