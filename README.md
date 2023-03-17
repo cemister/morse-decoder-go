@@ -12,7 +12,7 @@ This is a simple command-line program written in Go that translates Morse code i
 
 2. Clone the repository from GitHub using Git:
 ```
-git clone https://github.com/username/morse-code-decoder.git
+git clone https://github.com/sncelta/morse-decoder-go.git
 ```
 
 Alternatively, you can download the source code as a ZIP file from the GitHub repository.
