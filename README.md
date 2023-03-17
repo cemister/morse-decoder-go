@@ -1,4 +1,4 @@
-# Morse Code Decoder
+# Morse Decoder
 This is a simple command-line program written in Go that translates Morse code input into plain text. It can decode letters and numbers, and it also supports spaces between words.
 
 ## Requirements
@@ -19,7 +19,7 @@ Alternatively, you can download the source code as a ZIP file from the GitHub re
 
 3. Navigate to the root directory of the project.
 ```
-cd morse-code-decoder/src
+cd morse-decode-go/src
 ```
 4. Build the project using the following command:
 ```
@@ -30,7 +30,7 @@ This will create an executable file called morse-code-decoder.
 ## Usage
 To use the program, provide a Morse code string as a command line argument using the -morse flag:
 ```
-./morse-code-decoder -morse ".... . .-.. .-.. --- / .-- --- .-. .-.. -.. / -- --- .-. ... . / -.-. --- -.. ."
+./morse-decoder-go -morse ".... . .-.. .-.. --- / .-- --- .-. .-.. -.. / -- --- .-. ... . / -.-. --- -.. ."
 ```
 
 Note that you should enclose the Morse code string in quotes to prevent the shell from interpreting it as separate arguments. Also note that the forward slash character (/) is used to indicate a space in the input Morse code.
