@@ -49,19 +49,12 @@ var morseLetters = map[string]string{
 	"/":     " ",
 }
 
-func main() {
+func decodeMorse(morse string, warn bool) {
 	// output is a buffer that will be used to store the decoded message.
 	var output bytes.Buffer
 
-	// morse is the input Morse code to decode.
-	var morse string
-
-	// flag.StringVar parses the command line argument for the Morse code to decode.
-	flag.StringVar(&morse, "morse", "", "Morse code to decode.\nWARNING: DO NOT REMOVE THE QUOTES.")
-	flag.Parse()
-
 	// If the Morse code input is empty, output an error message and exit the program with an error code.
-	if len(morse) == 0 {
+	if morse == "" {
 		fmt.Fprintln(os.Stderr, "Error: Morse is empty")
 		os.Exit(1)
 	}
@@ -75,11 +68,30 @@ func main() {
 			if result, ok := morseLetters[char]; ok {
 				output.WriteString(result)
 			} else {
+				warn = true
 				output.WriteString("?")
 			}
 		}
 	}
 
+	if warn {
+		fmt.Println("WARNING: ? means that you put invalid code")
+	}
+
 	// Output the decoded message and a note about invalid codes.
-	fmt.Printf("Result: %s\nNOTE: ? means that you put invalid code.\n", output.String())
+	fmt.Printf("Result: %s", output.String())
+}
+
+func main() {
+	var warn bool
+
+	// flag.String/BoolVar parses the command line argument for the Morse code to decode.
+	flag.BoolVar(&warn, "warn", false, "Toggle warnings")
+
+	var morseInput string
+	flag.StringVar(&morseInput, "morse", "", "Morse code to decode.\nWARNING: DO NOT REMOVE THE QUOTES.")
+
+	flag.Parse()
+
+	decodeMorse(morseInput, warn)
 }
