@@ -1,5 +1,5 @@
 # Morse Decoder
-This program is a command-line tool for decoding Morse code. Given a string of Morse code as input, it will decode the message and output the corresponding letters and numbers.
+Command-line tool for decoding Morse code. Given a string of Morse code as input, it will decode the message and output the corresponding letters and numbers.
 
 ## Prerequisites
 1. [Go](https://go.dev/doc/install) version 1.16 or higher (because of `bytes.Buffer` type, which was introduced in 1.16)
