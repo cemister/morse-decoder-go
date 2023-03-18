@@ -8,7 +8,7 @@ import (
 	"strings" // package for working with strings
 )
 
-// morseLetters is a map that maps Morse code strings to their corresponding letters or symbols.
+// Morse->letter map
 var morseLetters = map[string]string{
 	".-":    "A",
 	"-...":  "B",
@@ -83,9 +83,11 @@ func decodeMorse(morse string, warn bool) {
 }
 
 func main() {
-	var warn bool
 
-	// flag.String/BoolVar parses the command line argument for the Morse code to decode.
+	/* Command line flags for warn boolean (if it should warn the user about invalid codes)
+	and morseInput string which is the target Morse code to decode */
+
+	var warn bool
 	flag.BoolVar(&warn, "warn", false, "Toggle warnings")
 
 	var morseInput string
